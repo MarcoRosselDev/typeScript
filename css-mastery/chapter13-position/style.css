@@ -20,7 +20,6 @@ body{
     width: 40vw;
     height: 50vh;
     margin: 200px auto;
-    position: relative;
 }
 .box{
     width: 150px;
@@ -34,4 +33,19 @@ body{
     position: absolute; /* si no aplicamos left o otra direccion un valor este se quedara en su posicion de origien pero esta atento al padre que tenga position-relative mas sercano, en este caso el ansestro mas sercano con position relative es onner-container, pero si no lo tuevise estaria en .outer-container, por que tmbn lo tiene ... */
     right: 0;
     bottom: 0;
+}
+
+.relative {
+    background-color: #f00;
+    position: relative; /* al aplicar relative siempre sera realitivo al contenedor que esta y no considerara los ancestros cercanos */
+    left: 10px;
+    top: 10px;
+}
+
+.fixed {
+    background-color: green;
+    position: fixed; /* se queda fijo, ideal para navs que se queden cuando scolleamos */
+    top: 0;
+    right: 0;
+    z-index: 1; /* ayuda a sobreponerse a todos los elementos o a ocultarse tras algunos jugando con el valor de z- positivos o negativos  */
 }
