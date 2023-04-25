@@ -57,3 +57,35 @@ body{
 }
 
 /* practis --------------------------------------------- */
+
+section{
+    height: 110vh;
+}
+
+.blue{
+    background-color: #00f;
+}
+.red{
+    background-color: #f00;
+}
+.green{
+    background-color: green;
+}
+
+header, footer{
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    font-size: 2rem;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+footer{
+    background-color: #000;
+    position: fixed;
+    border: 0;
+}
