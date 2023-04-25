@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 46px auto;
+}
+
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    color: #fff; /* estan ahi pero ahora son del color del fondo por lo que no puedes verlo pero estan de forma vertical dentro del rectangulo azul con un estapcio de 150px entre ellos */
+    padding: 1rem;
+}
