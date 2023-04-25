@@ -49,3 +49,9 @@ body{
     right: 0;
     z-index: 1; /* ayuda a sobreponerse a todos los elementos o a ocultarse tras algunos jugando con el valor de z- positivos o negativos  */
 }
+
+.sticky {
+    background-color: #000;
+    position: sticky;/* se desplasa con su contenedor asta que es no este en pantalla */
+    top: 0;
+}
