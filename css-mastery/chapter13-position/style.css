@@ -57,9 +57,23 @@ body{
 }
 
 /* practis --------------------------------------------- */
+html{
+    scroll-behavior: smooth;
+}
 
 section{
     height: 110vh;
+}
+
+.social{
+    background-color: purple;
+    color: antiquewhite;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 2rem;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
 }
 
 .blue{
@@ -84,8 +98,12 @@ header{
     top: 0;
 }
 
-footer{
+footer {
     background-color: #000;
-    position: fixed;
-    border: 0;
+    position: sticky;
+    bottom: 0;
+}
+
+a:visited{
+    color: #fff;
 }
