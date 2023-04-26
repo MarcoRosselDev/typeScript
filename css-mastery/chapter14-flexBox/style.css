@@ -11,23 +11,23 @@ body{
 }
 
 .container{
-    max-width: 800px;
-    min-height: 400px;
+    width: 400px;
+    height: 400px;
     margin-inline: auto;
     border: 1px solid #000;
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
     /* flex-direction: row-reverse;
     flex-wrap: wrap; */
     /* flex-flow hace estas dos en una sola, la primera es la direccion, la segunda es  wrap  */
-    flex-flow: row-reverse wrap-reverse;
+    
     gap: 1rem;
-    align-content: center;
 }
 
 .box{
-    min-width: 100px;
+    width: 100px;
     height: 100px;
     background-color: #000;
     color: #fff;
@@ -38,4 +38,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow:column-reverse ;
 }
