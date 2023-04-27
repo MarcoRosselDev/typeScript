@@ -38,6 +38,7 @@ body{
     grid-template-columns: repeat(2, 1fr 2fr);
     grid-auto-rows: minmax(150px, auto);
     gap: 2px;
+
 }
 
 .box{
@@ -45,6 +46,9 @@ body{
     color: #fff;
     font-size: 1.5rem;
     padding: 1.5rem;
+
+    display: grid;
+    place-content: center;
 }
 
 .box:first-child{
