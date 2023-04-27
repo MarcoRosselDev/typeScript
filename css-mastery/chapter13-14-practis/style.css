@@ -5,19 +5,27 @@
 }
 
 body{
-    font-size: 1rem;
     font-family: sans-serif;
 }
 
 header{
+    padding: 0.5rem;
     display: flex;
     flex-direction: row;
     justify-content: end;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+a{
+    color: #000;
+}
+a:hover{
+    color: blue;
+    text-decoration-line: underline;
 }
 
 main{
-    min-height: 80vh;
+    min-height: 75vh;
     display: grid;
     place-content: center;
     text-align: center;
@@ -43,8 +51,23 @@ a{
     height: 80px;
 }
 
+button:hover{
+    background-color: #c5c3c37c;
+}
+
 .google{
     font-size: 5rem;
+}
+
+footer div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer p{
+    padding-bottom: 20px;
 }
 
 /* .buttons{
