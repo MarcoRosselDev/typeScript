@@ -9,9 +9,28 @@ body{
     min-height: 100vh;
 }
 
+.container{
+    min-height: 600px;
+    display: grid;
+    border: 1px solid #fff;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 2px;
+}
+
 .box{
     background-color: #000;
     color: #fff;
     font-size: 1.5rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
+}
+
+.box:first-child{
+    background-color: green;
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start:1;
+    grid-row-end:3; */
+    grid-column: 1/4;
+    grid-row:1/3;
 }
