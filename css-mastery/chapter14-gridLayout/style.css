@@ -7,9 +7,31 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 75px auto 75px;
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn mn mn sb"
+        "mn mn mn mn mn mn mn mn sb"
+        "fo fo fo fo fo fo fo fo fo"
+    ;
+}
+
+.el{
+    background-color: rebeccapurple;
+    display: grid;
+    place-content: center;
+}
+
+.header{
+    color: #000;
+    grid-area: hd;
 }
 
 .container{
+    grid-area: mn;
     min-height: 600px;
     display: grid;
     border: 1px solid #fff;
@@ -45,4 +67,11 @@ body{
     justify-content: center; */
     place-content: center; /* center center = center */
     /* primer valor : align-content, despues justify */
+}
+.sidebar{
+    grid-area: sb;
+}
+
+.footer{
+    grid-area: fo;
 }
