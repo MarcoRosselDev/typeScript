@@ -27,3 +27,19 @@ const assets = [
 ]
 
 console.log(assets[1].img);
+
+let iterador = 0;
+
+const btnSiguiente = document.querySelector('.nextBtn');
+const para = document.querySelector('.para');
+
+function map() {
+    para.innerText = assets[iterador].para;
+    iterador++
+}
+
+map()
+
+btnSiguiente.addEventListener('click', function () {
+    map()
+})
