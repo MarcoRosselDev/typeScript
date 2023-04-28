@@ -1,35 +1,29 @@
-const assets = {
-    person1: {
-        name: "Lushito Random",
-        img: "/img/1",
-        para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
+const assets = [
+    {
+        "name": "Lushito Random",
+        "img": "/img/1",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
     },
-    person2: {
-        name: "Maarco Random",
-        img: "/img/2",
-        para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
+    {
+        "name": "Maarco Random",
+        "img": "/img/2",
+        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
     },
-    person3: {
-        name: "Eva Random",
-        img: "/img/3",
-        para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
+    {
+        "name": "Eva Random",
+        "img": "/img/3",
+        "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro officiis omnis minima, libero nam autem doloribus deserunt! Enim, atque id! Quo quidem iste laborum suscipit perspiciatis adipisci saepe nesciunt. Blanditiis"
     },
-    person4: {
-        name: "Eduardo Random",
-        img: "/img/4",
-        para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
+    {
+        "name": "Eduardo Random",
+        "img": "/img/4",
+        "para": "Quo quidem iste laborum suscipit perspiciatis adipisci saepe nesciunt. Blanditiis nisi laborum, corrupti voluptate quasi expedita nobis iusto qui, inventore aperiam quis explicabo tempora. Laboriosam delectus earum corporis cum necessitatibus aut. Sit provident laudantium"
     },
-    person5: {
-        name: "Juanito Random",
-        img: "/img/5",
-        para: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
-    },
-}
+    {
+        "name": "Juanito Random",
+        "img": "/img/5",
+        "para": 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro officiis omnis minima, libero nam autem doloribus deserunt! Enim, atque id! Quo quidem iste laborum suscipit perspiciatis adipisci saepe nesciunt. Blanditiis nisi laborum, corrupti voluptate quasi expedita nobis iusto qui, inventore aperiam quis explicabo tempora. Laboriosam delectus earum corporis cum necessitatibus aut. Sit provident laudantium quibusdam pariatur harum enim ducimus!'
+    }
+]
 
-console.log(assets.person1.para);
-
-(function () {
-    "use strict";
-
-    
-})()
+console.log(assets[1].img);
