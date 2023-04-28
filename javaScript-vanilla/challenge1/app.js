@@ -1,15 +1,18 @@
-const assets = [
-    {
-        "name": "Lushito Random",
-        "img": "img/1.jpg",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
-    },
-    {
-        "name": "Maarco Random",
-        "img": "img/2.jpg",
-        "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
-    },
-    {
+(function () {
+    'use strict';
+
+    const assets = [
+        {
+            "name": "Lushito Random",
+            "img": "img/1.jpg",
+            "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, dolorum molestias modi atque doloremque ab repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
+        },
+        {
+            "name": "Maarco Random",
+            "img": "img/2.jpg",
+            "para": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. repellat minima suscipit, voluptatem animi architecto necessitatibus amet esse quibusdam eligendi molestiae obcaecati praesentium saepe?"
+        },
+        {
         "name": "Eva Random",
         "img": "img/3.jpg",
         "para": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur porro officiis omnis minima, libero nam autem doloribus deserunt! Enim, atque id! Quo quidem iste laborum suscipit perspiciatis adipisci saepe nesciunt. Blanditiis"
@@ -58,3 +61,5 @@ btnAnterior.addEventListener('click', function (e) {
     iterador--;
     mostrar()
 })
+
+})()
