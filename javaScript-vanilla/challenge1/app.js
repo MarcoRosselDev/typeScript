@@ -26,8 +26,6 @@ const assets = [
     }
 ]
 
-console.log(assets[1].img);
-
 let iterador = 0;
 
 // botones
@@ -39,32 +37,24 @@ const img = document.querySelector('.img');
 const name = document.querySelector('.name')
 
 function mostrar() {
+    if (iterador >= assets.length) {
+        iterador = 0
+    } else if (iterador < 0) {
+        iterador = assets.length - 1;
+    }
     para.innerText = assets[iterador].para;
     img.src = assets[iterador].img;
     name.innerText = assets[iterador].name;
 }
-
 mostrar()
 
-btnSiguiente.addEventListener('click', function () {
-
-    console.log(assets.length);
-
-    if (iterador >= assets.length) {
-        iterador = 0
-        mostrar();
-    } else if (iterador < 0) {
-        iterador = assets.length
-        mostrar();
-    }else{
-
-        iterador++;
-        mostrar();
-        console.log(iterador);
-    }
+btnSiguiente.addEventListener('click', function (e) {
+    e.preventDefault;
+    iterador++;
+    mostrar();  
 })
-btnAnterior.addEventListener('click', function () {
+btnAnterior.addEventListener('click', function (e) {
+    e.preventDefault;
     iterador--;
     mostrar()
-    console.log(iterador);
 })
