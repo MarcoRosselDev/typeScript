@@ -38,21 +38,33 @@ const para = document.querySelector('.para');
 const img = document.querySelector('.img');
 const name = document.querySelector('.name')
 
-function siguiente() {
+function mostrar() {
     para.innerText = assets[iterador].para;
     img.src = assets[iterador].img;
     name.innerText = assets[iterador].name;
 }
 
-siguiente()
+mostrar()
 
 btnSiguiente.addEventListener('click', function () {
-    iterador++;
-    siguiente();
-    console.log(iterador);
+
+    console.log(assets.length);
+
+    if (iterador >= assets.length) {
+        iterador = 0
+        mostrar();
+    } else if (iterador < 0) {
+        iterador = assets.length
+        mostrar();
+    }else{
+
+        iterador++;
+        mostrar();
+        console.log(iterador);
+    }
 })
 btnAnterior.addEventListener('click', function () {
     iterador--;
-    siguiente()
+    mostrar()
     console.log(iterador);
 })
