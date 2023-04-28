@@ -61,4 +61,8 @@ img{
     body{
         background-color: greenyellow;
     }
+
+    nav{
+        display: none;
+    }
 }
