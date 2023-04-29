@@ -48,7 +48,7 @@ input:hover{
     background-color: rgb(255, 255, 255);
 }
 
-button{
+.btn{
     background-color: rgb(38, 110, 243);
     color: aliceblue;
     padding: 3px 10px;
@@ -56,7 +56,7 @@ button{
     border: 1px solid rgba(0, 0, 255, 0.249);
 }
 
-button:hover{
+.btn:hover{
     background-color: rgba(38, 110, 243, 0.661);
 }
 
