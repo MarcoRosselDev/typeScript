@@ -14,9 +14,22 @@ main{
 .box{
     min-width: 100px;
     min-height: 100px;
+    max-width: 300px;
+    max-height: 300px;
     border: 1px solid #00000029;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@media screen and (min-width: 599px) {
+    body{
+        background-color: aqua;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+    }
+}
