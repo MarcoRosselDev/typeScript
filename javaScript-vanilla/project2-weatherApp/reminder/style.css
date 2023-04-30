@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -14,4 +15,19 @@ body{
     min-width: 50vh;
     border: 1px solid red;
     margin: 20px;
+    row-gap: 20px;
+}
+
+button{
+    background-color: rgba(0, 0, 255, 0.748);
+    color: whitesmoke;
+    padding: 6px 30px ;
+    border-radius: 5px;
+    border: solid 1px blue;
+}
+
+input{
+    border: 1px solid #00000032;
+    padding: 6px 30px ;
+    border-radius: 5px;
 }
