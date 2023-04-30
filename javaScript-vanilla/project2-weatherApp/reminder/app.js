@@ -5,13 +5,24 @@
     const inputValue = document.querySelector('input');
     const divPrint = document.querySelector('.printDiv');
 
+    // variable let para almacenar la lista
+    let saveList = []
+
     send.addEventListener('click', function (event) {
         event.preventDefault();
+
+        saveList.push(inputValue.value)
+
+        for (let i = 0; i < saveList.length; i++) {
+            divPrint.innerHTML += `<li>${saveList[i]}</li>`;
+            
+        }
+/* 
         divPrint.innerHTML = `
         <li>
-        ${inputValue.value}</li>
+        ${saveList}</li>
         `;
-        inputValue.value = ''
+        inputValue.value = '' */
     })
 })() 
 
