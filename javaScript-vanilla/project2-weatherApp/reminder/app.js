@@ -18,7 +18,15 @@
         function printDOM (){
             let finalPrint = '';
             for (let i = 0; i < saveList.length; i++) {
-                finalPrint += ` <li>${saveList[i]}</li>` 
+                finalPrint += `
+                <div class="list">
+                    <p>${saveList[i]}</p>
+                    <div class="btns">
+                        <button class="btnDone">Finished</button>
+                        <button class="btnDelete">Delete Task</button>
+                    </div>                    
+                </div>
+                ` 
             }
             console.log(finalPrint);
             divPrint.innerHTML = finalPrint;

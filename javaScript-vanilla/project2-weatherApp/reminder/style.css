@@ -60,3 +60,30 @@ input:focus{
 input::placeholder{
     color: rgba(0, 0, 0, 0.37);
 }
+
+/* manipulacion de DOM -------------------------*/
+
+.printDiv{
+    border: 1px solid red;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns{
+    width: 50%;
+    display: flex;
+}
+
+.btnDone{
+    background-color: rgba(0, 128, 0, 0.677);
+    width: 50%;
+    height: 30px;
+}
+.btnDelete{
+    background-color: rgba(240, 23, 59, 0.654);
+    width: 50%;
+    height: 30px;
+}
