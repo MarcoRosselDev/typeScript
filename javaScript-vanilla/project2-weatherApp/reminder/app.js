@@ -13,10 +13,22 @@
 
         saveList.push(inputValue.value)
 
-        for (let i = 0; i < saveList.length; i++) {
-            divPrint.innerHTML += `<li>${saveList[i]}</li>`;
-            
-        }
+        console.log(saveList);
+
+        function printDOM (){
+            let finalPrint = '';
+            for (let i = 0; i < saveList.length; i++) {
+                finalPrint += ` <li>${saveList[i]}</li>` 
+            }
+            console.log(finalPrint);
+            divPrint.innerHTML = finalPrint;
+        } 
+
+        printDOM()
+
+        //divPrint.innerHTML += `<li>${saveList}</li>`;
+
+        inputValue.value = ""
 /* 
         divPrint.innerHTML = `
         <li>
