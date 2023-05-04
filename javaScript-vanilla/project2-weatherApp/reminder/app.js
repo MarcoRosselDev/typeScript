@@ -10,11 +10,7 @@
 
     send.addEventListener('click', function (event) {
         event.preventDefault();
-
         saveList.push(inputValue.value)
-
-        console.log(saveList);
-
         function printDOM (){
             let finalPrint = '';
             for (let i = 0; i < saveList.length; i++) {
@@ -28,31 +24,19 @@
                 </div>
                 ` 
             }
-            console.log(finalPrint);
             divPrint.innerHTML = finalPrint;
         } 
-
         printDOM()
-
-        //divPrint.innerHTML += `<li>${saveList}</li>`;
-
-        inputValue.value = ""
-/* 
-        divPrint.innerHTML = `
-        <li>
-        ${saveList}</li>
-        `;
-        inputValue.value = '' */
+        inputValue.value = "";
+        const btnDone = document.querySelectorAll('.btnDone');
+    
+        console.log(btnDone);
+        btnDone.forEach(e => e.addEventListener('click', function (e) {
+            e.preventDefault()
+            console.log('done Clicked');
+        }))
     })
+
 })() 
 
-/* <main>
-        <h1>To do List</h1>
-        <form action="">
-            <input type="text" placeholder="write a task to do...">
-            <button class="send">Send</button>
-        </form>
-        <div class="printDiv">
-            
-        </div>
-    </main> */
+
