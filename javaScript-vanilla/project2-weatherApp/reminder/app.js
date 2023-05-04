@@ -28,12 +28,14 @@
         } 
         printDOM()
         inputValue.value = "";
-        const btnDone = document.querySelectorAll('.btnDone');
-    
-        console.log(btnDone);
-        btnDone.forEach(e => e.addEventListener('click', function (e) {
+        const btnDelete = document.querySelectorAll('.btnDelete');
+        btnDelete.forEach(e => e.addEventListener('click', function (e) {
             e.preventDefault()
-            console.log('done Clicked');
+            console.log(this.parentNode.innerText);
+            const f = saveList.find(a => a == this.parentNode.parentNode.innerText)
+            console.log(f, 'f');
+            console.log(saveList);
+            this.parentNode.parentNode.remove()
         }))
     })
 
