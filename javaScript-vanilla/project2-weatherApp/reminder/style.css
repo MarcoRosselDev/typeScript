@@ -20,7 +20,7 @@ main{
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    max-height: 100vh;
+    max-height: auto;
     max-width: 400px;
     min-width: auto;
     padding: 30px;
@@ -36,6 +36,8 @@ button{
     padding: 6px 30px ;
     border-radius: 5px;
     border: solid 1px blue;
+    font-size: 0.6rem;
+    height: 27px;
 }
 
 button:hover{
@@ -80,10 +82,12 @@ input::placeholder{
 .btnDone{
     background-color: rgba(0, 128, 0, 0.677);
     width: 50%;
-    height: 30px;
+    display: flex;
+    justify-content: center;
 }
 .btnDelete{
     background-color: rgba(240, 23, 59, 0.654);
     width: 50%;
-    height: 30px;
+    display: flex;
+    justify-content: center;
 }

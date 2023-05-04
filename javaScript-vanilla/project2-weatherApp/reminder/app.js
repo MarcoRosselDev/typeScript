@@ -23,7 +23,7 @@
                     <p>${saveList[i]}</p>
                     <div class="btns">
                         <button class="btnDone">Finished</button>
-                        <button class="btnDelete">Delete Task</button>
+                        <button class="btnDelete">Delete</button>
                     </div>                    
                 </div>
                 ` 
