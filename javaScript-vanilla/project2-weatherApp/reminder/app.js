@@ -32,10 +32,14 @@
         btnDelete.forEach(e => e.addEventListener('click', function (e) {
             e.preventDefault()
 
-            console.log(this.parentElement.parentElement.innerText[0] );
+            const thiss = this.parentNode.parentNode;
 
+            const f = thiss.querySelector('p');
+            const text = f.innerText
+
+            saveList = saveList.filter(e => e !== text);
             console.log(saveList);
-            //this.parentNode.parentNode.remove()
+            this.parentNode.parentNode.remove()
         }))
     })
 
