@@ -1,4 +1,4 @@
-
+apiKey = process.env.WEATHER-KEY;
 
 async function weather(cityValue) {
     try {
