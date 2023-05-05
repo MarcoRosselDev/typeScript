@@ -20,22 +20,22 @@
                     <div class="btns">
                         <button class="btnDone">Finished</button>
                         <button class="btnDelete">Delete</button>
-                    </div>                    
+                    </div>                
                 </div>
-                ` 
+                `
             }
             divPrint.innerHTML = finalPrint;
-        } 
+        }
         printDOM()
         inputValue.value = "";
         const btnDelete = document.querySelectorAll('.btnDelete');
         btnDelete.forEach(e => e.addEventListener('click', function (e) {
             e.preventDefault()
-            console.log(this.parentNode.innerText);
-            const f = saveList.find(a => a == this.parentNode.parentNode.innerText)
-            console.log(f, 'f');
+
+            console.log(this.parentElement.parentElement.innerText[0] );
+
             console.log(saveList);
-            this.parentNode.parentNode.remove()
+            //this.parentNode.parentNode.remove()
         }))
     })
 
