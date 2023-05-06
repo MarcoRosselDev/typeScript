@@ -1,9 +1,9 @@
 require('dotenv').config()
-console.log(process.env.kEYVAR);
+console.log(process.env)
 
-apiKey = process.env.WEATHERKEY; 
+//apiKey = process.env.WEATHERKEY; 
 
-async function weather(cityValue) {
+/* async function weather(cityValue) {
     try {
         const a = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`);
         console.log(a);
@@ -12,7 +12,7 @@ async function weather(cityValue) {
     }
 }
 
-weather('london');
+weather('london'); */
 
 /* Response {type: 'cors', url: 'https://api.openweathermap.org/data/2.5/weather?q=…pid=31ac23275854f9c11d7b50ea72b823b8&units=metric', redirected: false, status: 200, ok: true, …}
 
