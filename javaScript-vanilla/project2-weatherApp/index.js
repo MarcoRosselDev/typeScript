@@ -1,4 +1,7 @@
-apiKey = process.env.WEATHER-KEY;
+require('dotenv').config()
+console.log(process.env.kEYVAR);
+
+apiKey = process.env.WEATHERKEY; 
 
 async function weather(cityValue) {
     try {
