@@ -1,26 +1,32 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-console.log(import.meta.env.VITE_SOME_KEY);
+console.log(import.meta.env.VITE_WHEATER_KEY);
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+  <div class="container">
+    <h2>Weather App</h2>
+    <form action="">
+        <input type="text" placeholder="input the city name...">
+        <!-- <button type="submit">Get Weather</button> -->
+        <!-- podemos add a button pero el input type submit lo envia por defecto
+        con el button tendriamos que escuchar el evento click -->
+        <input type="submit" value="Get Weather" class="btn">
+    </form>
+    <div class="details">
+        <img src="#" alt="icon weather" class="icon">
+        <h2 class="temperature">4 ° C</h2>
+        <p class="description">overcast clouds</p>
+        <div class="anotherDetails">
+            <div class="box">
+                <p>Feels like 3 ° C</p>
+            </div>
+            <div class="box">
+                <p>Humidity 81%</p>
+            </div>
+            <div class="box">
+                <p>Wind speed: 154 m/s</p>
+            </div>
+        </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
   </div>
 `
-
-setupCounter(document.querySelector('#counter'))
