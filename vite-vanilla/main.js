@@ -1,6 +1,17 @@
 import './style.css'
 
-console.log(import.meta.env.VITE_WHEATER_KEY);
+const apiKey = import.meta.env.VITE_WHEATER_KEY
+
+async function weather(cityValue) {
+  try {
+      const a = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`);
+      console.log(a);
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+weather('london');
 
 document.querySelector('#app').innerHTML = `
   <div class="container">
