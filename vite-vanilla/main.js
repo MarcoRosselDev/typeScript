@@ -48,6 +48,7 @@ async function weather(cityValue) {
 
         const descripText = document.querySelector('.description').innerText = description;
         const tempText = document.querySelector('.temperature').innerText = temperature;
+        const iconSrc = document.querySelector('.icon').src = `http://openweathermap.org/wn/${icon}.png`
 
         console.log(data);
     } catch (error) {
