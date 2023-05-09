@@ -13,20 +13,7 @@ document.querySelector('#app').innerHTML = `
             <input type="submit" value="Get Weather" class="btn">
         </form>
         <div class="details">
-            <img src="#" alt="icon weather" class="icon">
-            <h2 class="temperature">4 ° C</h2>
-            <p class="description">overcast clouds</p>
-            <div class="anotherDetails">
-                <div class="box">
-                    <p>Feels like 3 ° C</p>
-                </div>
-                <div class="box">
-                    <p>Humidity 81%</p>
-                </div>
-                <div class="box">
-                    <p>Wind speed: 154 m/s</p>
-                </div>
-            </div>
+            
         </div>
     </div>
 `
@@ -37,19 +24,40 @@ async function weather(cityValue) {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`);
         
         if (!response.ok) {
-            throw new Error('La respuesta no fue bien')
+            const details = document.querySelector('.details')
+            details.innerHTML = `<h2 class="temperature">Ciudad no encontrada</h2>`
         }
         
         const data = await response.json()
 
+        // get data from api response
+        const city = data.name;
         const description = data.weather[0].description;
         const icon = data.weather[0].icon;
         const temperature = `${Math.round(data.main.temp)} ° C`;
+        const humedad = `${data.main.humidity} %`;
+        const feelsLike = Math.round(data.main.feels_like);
+        const windSpeed = data.wind.speed;
 
-        const descripText = document.querySelector('.description').innerText = description;
-        const tempText = document.querySelector('.temperature').innerText = temperature;
-        const iconSrc = document.querySelector('.icon').src = `http://openweathermap.org/wn/${icon}.png`
-
+        // pushed on html dom
+        const details = document.querySelector('.details')
+        details.innerHTML = `
+        <h2 class="temperature">${city}</h2>
+        <img src="http://openweathermap.org/img/wn/${icon}.png" alt="icon weather" class="icon">
+        <h2 class="temperature">${temperature}</h2>
+        <p class="description">${description}</p>
+        <div class="anotherDetails">
+            <div class="box">
+                <p>Feels like ${feelsLike} ° C</p>
+            </div>
+            <div class="box">
+                <p>${humedad} humidity</p>
+            </div>
+            <div class="box">
+                <p>${windSpeed} m/s</p>
+            </div>
+        </div>
+        `
         console.log(data);
     } catch (error) {
         console.log(error);
@@ -62,6 +70,5 @@ const valueInpt = document.querySelector('input')
 
 btn.addEventListener('click', function (e) {
     e.preventDefault()
-    console.log('clicked');
     weather(valueInpt.value);
 })
