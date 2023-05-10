@@ -10,19 +10,16 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  border: 1px solid red;
   background-color: rgba(3, 93, 141, 0.808);
 }
 
 form{
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.194);
   min-height: 30vh;
   justify-content:center;
   align-items: center;
   padding: 20px;
-  background-color: aliceblue;
   border-radius: 10px;
   gap: 10px;
 }
@@ -39,6 +36,14 @@ button{
   width: 100px;
   border-radius: 5px;
   border: 1px solid #0000004e;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  text-align: center;
+  border: 1px solid red;
 }
 
 @media screen and (min-width: 536px) {
