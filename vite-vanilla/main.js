@@ -21,7 +21,7 @@ document.querySelector('#app').innerHTML = `
 
 async function weather(cityValue) {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metri`);
         
         if (!response.ok) {
             const details = document.querySelector('.details')
