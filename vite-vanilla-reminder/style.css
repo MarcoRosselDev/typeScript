@@ -43,7 +43,8 @@ main{
   flex-direction: column;
   background-color: aliceblue;
   text-align: center;
-  border: 1px solid red;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .app{
@@ -55,6 +56,16 @@ main{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+.moreInfo article{
+  display: flex;
+  width: 27%;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 536px) {
