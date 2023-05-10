@@ -46,6 +46,17 @@ main{
   border: 1px solid red;
 }
 
+.app{
+  display: flex;
+  flex-direction: column;
+}
+
+.moreInfo{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
 @media screen and (min-width: 536px) {
   form{
     display: flex;
