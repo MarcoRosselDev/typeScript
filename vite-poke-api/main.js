@@ -10,7 +10,7 @@ async function pokeApi(namePokemon) {
     } else{
       console.log(data);
 
-      const imgFromnt = data.sprites.front_default;
+      const imgFromnt = data.sprites.other.dream_world.front_default;
       console.log(imgFromnt);
 
       result.innerHTML = `
