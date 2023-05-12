@@ -10,13 +10,28 @@ async function pokeApi(namePokemon) {
     } else{
       console.log(data);
 
-      const imgFromnt = data.sprites.other.dream_world.front_default;
+      //const imgFromnt = data.sprites.other.dream_world.front_default;
+      const imgFromnt = data.sprites.other.home.front_default;
       const pokeName = data.name;
       const tipo = data.types[0].type.name;
 
       // se puede mejorar perguntando el numero de habilidades para iterar por ahi
       const abilities = data.abilities[0].ability.name;
       const abilities2 = data.abilities[1].ability.name;
+      const id = data.id;
+
+      //console.log(data.chain.evolves_to[0].evolves_to[0].species.name)
+      async function evolution(name) {
+        try {
+          const response = await fetch(`https://pokeapi.co/api/v2/evolution-chain/${name}/`);
+          const data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.log('error dentro del segundo try catch');
+        }
+      }
+      
+      evolution(id)
 
       result.innerHTML = `
       <img src=${imgFromnt} alt="pokemon testing" class="imgPoke">
