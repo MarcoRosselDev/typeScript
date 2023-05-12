@@ -40,3 +40,17 @@ main .result{
   width: 300px;
   height: 300px;
 }
+
+input{
+  padding: 5px;
+  border-radius: 4px;
+  color: black;
+  background-color: rgba(213, 225, 230, 0.534);
+}
+
+button{
+  padding: 5px;
+  border-radius: 4px;
+  color: black;
+  background-color: skyblue;
+}
