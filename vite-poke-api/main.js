@@ -20,11 +20,10 @@ async function pokeApi(namePokemon) {
 
       result.innerHTML = `
       <img src=${imgFromnt} alt="pokemon testing" class="imgPoke">
-      <p>${pokeName}</p>
-      <p>vida</p>
-      <p>${abilities}</p>
-      <p>${abilities2}</p>
-      <p>${tipo}</p>
+      <p>name : ${pokeName}</p>
+      <p>abilitie 1 : ${abilities}</p>
+      <p>abilitie 2 : ${abilities2}</p>
+      <p>element tipe : ${tipo}</p>
       `
     }
   } catch (error) {
