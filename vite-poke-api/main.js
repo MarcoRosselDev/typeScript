@@ -11,10 +11,20 @@ async function pokeApi(namePokemon) {
       console.log(data);
 
       const imgFromnt = data.sprites.other.dream_world.front_default;
-      console.log(imgFromnt);
+      const pokeName = data.name;
+      const tipo = data.types[0].type.name;
+
+      // se puede mejorar perguntando el numero de habilidades para iterar por ahi
+      const abilities = data.abilities[0].ability.name;
+      const abilities2 = data.abilities[1].ability.name;
 
       result.innerHTML = `
-        <img src=${imgFromnt} alt="pokemon testing">
+      <img src=${imgFromnt} alt="pokemon testing" class="imgPoke">
+      <p>${pokeName}</p>
+      <p>vida</p>
+      <p>${abilities}</p>
+      <p>${abilities2}</p>
+      <p>${tipo}</p>
       `
     }
   } catch (error) {
