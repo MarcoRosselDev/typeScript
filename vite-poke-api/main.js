@@ -24,9 +24,14 @@ async function pokeApi(namePokemon) {
       //console.log(data.chain.evolves_to[0].evolves_to[0].species.name)
       async function evolution(ident) {
         try {
-          const response2 = await fetch(`A https://pokeapi.co/api/v2/evolution-chain/${ident}/`);
+          const response2 = await fetch(`https://pokeapi.co/api/v2/evolution-chain/${ident}/`);
           const data2 = await response2.json();
-          console.log(data2);
+
+          if (!data2) {
+            console.log('no se entonctro data2 dentro del primer fetch');
+          } else{
+            console.log(data2);
+          }
         } catch (error) {
           throw new Error('error dentro del segundo try catch');
         }
