@@ -20,11 +20,12 @@ async function pokeApi(namePokemon) {
       const abilities2 = data.abilities[1].ability.name;
       const id = data.id;
       
-
+      const thi = data.this;
+      console.log(thi);
       //console.log(data.chain.evolves_to[0].evolves_to[0].species.name)
       async function evolution(ident) {
         try {
-          const response2 = await fetch(`https://pokeapi.co/api/v2/evolution-chain/${ident}/`);
+          const response2 = await fetch(`https://pokeapi.co/api/v2/evolution-chain/${ident}`);
           const data2 = await response2.json();
 
           if (!data2) {
@@ -36,9 +37,9 @@ async function pokeApi(namePokemon) {
           throw new Error('error dentro del segundo try catch');
         }
       }
-      const idString = toString(id);
-      
-      evolution(idString);
+      // error id no coinside con la evolucion, por ejemplo 4 es charmander
+      // pero id 4 en evolucion es ratata, por lo que no me sirve el id extraido de data.
+      evolution(4);
 
       result.innerHTML = `
       <img src=${imgFromnt} alt="pokemon testing" class="imgPoke">
