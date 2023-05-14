@@ -9,3 +9,7 @@ body{
   color: white;
   font-family: sans-serif;
 }
+
+.img {
+  max-height: 500px;
+}

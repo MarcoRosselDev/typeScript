@@ -15,7 +15,11 @@ async function getAPhoto() {
     } else {
       let finalDom = '';
       for (let i = 0; i < data.length; i++) {
-        finalDom += `<p>${data[i].alt_description}</p>`;
+        finalDom += `
+        <img src=${data[i].urls.regular} alt=${data[i].alt_description} class="img">
+        <p>description image ${i} : ${data[i].description}</p>
+        <p>${data[i].alt_description}</p>
+        `;
       }
       div.innerHTML = finalDom;
     }
