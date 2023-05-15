@@ -5,7 +5,10 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 
 
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth/2, window.innerHeight/2, false);
+// el tercer argumento false se puede quitar despues
+// y quitar los divisores /2 
+
 document.body.appendChild( renderer.domElement );
 
 
@@ -15,6 +18,15 @@ const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
 camera.position.z = 5;
+
+function animate() {
+	requestAnimationFrame( animate );
+	renderer.render( scene, camera );
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
+}
+
+animate();
 
 console.log();
 
