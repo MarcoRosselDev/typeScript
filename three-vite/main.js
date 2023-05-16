@@ -7,7 +7,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const loader = new GLTFLoader();
 
-/* loader.load( 'path/to/model.glb', function ( gltf ) {
+/* loader.load( 'path/to/blender-test.glb', function ( gltf ) {
 
 	scene.add( gltf.scene );
 
