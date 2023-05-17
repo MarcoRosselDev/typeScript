@@ -6,6 +6,6 @@
 
     buttonSend.addEventListener('click', function (event) {
         event.preventDefault();
-        console.log('button send clicked');
+        console.log(inputVal.value);
     })
 })()
