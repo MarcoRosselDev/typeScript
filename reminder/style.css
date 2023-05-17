@@ -20,9 +20,15 @@ button{
     border: solid rgba(43, 43, 43, 0.349) 1px;
     /* buscar como aplicar sombras para dar profundidad */
 }
+input{
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: solid rgba(43, 43, 43, 0.349) 1px;
+}
 
 ul{
-    border: 1px solid green;
+    text-align: center;
+    padding: 5px;
 }
 li{
     list-style: none;
