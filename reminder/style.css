@@ -7,7 +7,7 @@ body{
     font-family: sans-serif;
     background-color: #f4f4f4;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -19,4 +19,13 @@ button{
     border-radius: 5px;
     border: solid rgba(43, 43, 43, 0.349) 1px;
     /* buscar como aplicar sombras para dar profundidad */
+}
+
+ul{
+    border: 1px solid green;
+}
+li{
+    list-style: none;
+    padding: 5px;
+    border: 1px solid pink;
 }
