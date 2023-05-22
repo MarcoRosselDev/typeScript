@@ -22,7 +22,8 @@ renderer.setSize( window.innerWidth/2, window.innerHeight/2, false);
 // el tercer argumento false se puede quitar despues
 // y quitar los divisores /2 
 
-document.body.appendChild( renderer.domElement );
+//document.body.appendChild( renderer.domElement );
+
 
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
@@ -43,10 +44,5 @@ animate();
 
 console.log();
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <p>
-      testing font family
-    </p>
-  </div>
-`;
+const appDom = document.querySelector('#app');
+appDom.appendChild(renderer.domElement)
