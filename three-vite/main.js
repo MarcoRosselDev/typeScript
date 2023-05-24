@@ -30,7 +30,7 @@ function animate() {
 }
 
 
-loader.load('path/tested.glb', function (gltf) {
+loader.load('path/4tested.glb', function (gltf) {
     scene.add(light)
     scene.add( directionalLight );
     scene.add(gltf.scene);
