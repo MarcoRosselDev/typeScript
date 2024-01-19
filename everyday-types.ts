@@ -14,3 +14,19 @@ obj();
 obj.bar = 100;
 obj = "hello";
 const n: number = obj;
+
+// Optional propertys === ?
+// podemos espasificar si una propiedad es opcional
+// sintax
+function printName(obj: {first: string; last?: string}) {
+  
+}
+// los siguientes dos estan ok
+printName({first:"Bob"})
+printName({first:"Bob", last: "Alisson"})
+
+// return type annotations
+// sintax
+function getFavoriteNumber(params:number):number {
+  return 123;
+}
