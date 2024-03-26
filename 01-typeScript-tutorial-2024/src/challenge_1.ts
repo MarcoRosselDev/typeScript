@@ -6,16 +6,18 @@
 - Try to assign a value of a different type to each of these variables and observe the TypeScript compiler's response.
 - You can use type annotation or inference */
 
-let my_string = 'marco rossel'
+let my_string:string = 'marco rossel'
 my_string = my_string.toUpperCase()
 console.log(my_string);
 
-let my_number = 10
+let my_number:number = 10
 my_number = my_number * 10
 console.log(my_number);
 
-let my_boolean = true
+let my_boolean:boolean = true
 if (my_boolean) {
   my_boolean = !my_boolean
 }
 console.log(my_boolean);
+
+//my_boolean = 10
