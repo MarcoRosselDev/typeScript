@@ -19,13 +19,9 @@ console.log(check_names('eduardo'));// false
 console.log(check_names('marco'));// true
 
 function n_parametros(mensaje:string, ...numeros: number[]):string {
-  console.log(numeros);
-  
-  const doble = numeros.forEach(item => console.log(item))
-  console.log(doble);
-  
+  const doble = numeros.reduce((prev, current) => prev + current)
   return `${mensaje} : ${doble}`
 }
 
 let test = n_parametros('la cantidad es', 1, 4, 5, 1)
-console.log(test);
+// output: la cantidad es : 11

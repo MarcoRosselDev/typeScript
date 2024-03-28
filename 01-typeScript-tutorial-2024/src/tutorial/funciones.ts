@@ -30,10 +30,3 @@ function precio_por_defecto(precio:number, descuento:number = 0):number {
 
 
 
-function n_parametros(mensaje:string, ...numeros: number[]):string {
-  const doble = numeros.map(item => item*2)
-  return `${mensaje} : ${doble}`
-}
-
-let test = n_parametros('la cantidad es', 1, 4, 5, 1)
-console.log(test);
