@@ -15,5 +15,25 @@ function precio_final(precio:number, descuento?:number):number {
   // de esta forma si no se incluye el descuento se multiplica por 0 como valor por defecto
 }
 
-console.log(precio_final(100, 20));
-console.log(precio_final(100));
+//console.log(precio_final(100, 20));
+//console.log(precio_final(100));
+
+
+
+
+// valor por defecto || otra manera de resolver el mismo problema
+function precio_por_defecto(precio:number, descuento:number = 0):number {
+  return precio - descuento
+}
+
+
+
+
+
+function n_parametros(mensaje:string, ...numeros: number[]):string {
+  const doble = numeros.map(item => item*2)
+  return `${mensaje} : ${doble}`
+}
+
+let test = n_parametros('la cantidad es', 1, 4, 5, 1)
+console.log(test);
