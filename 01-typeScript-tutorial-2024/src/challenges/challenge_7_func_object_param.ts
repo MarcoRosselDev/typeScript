@@ -10,7 +10,7 @@ If input is of type string, the function should return the string in uppercase.
 If the reverse property on the config object is true, and input is a string, the function should return the reversed string in uppercase.
 */
 
-function processData(input:string|number, config: {'reverse':boolean} = {'reverse':false}) {
+/* function processData(input:string|number, config: {'reverse':boolean} = {'reverse':false}):string | number{
   if (typeof input === 'number') {
     return input**2
   } else if (typeof input === 'string' && config.reverse) {
@@ -19,6 +19,10 @@ function processData(input:string|number, config: {'reverse':boolean} = {'revers
   } else if (typeof input === 'string' && !config.reverse) {
     return input.toUpperCase()
   }
+} */
+
+function processData(input:string| number, config: {'reverse': boolean} = {'reverse': false}): string | number {
+  return typeof input === 'number'? input ** 2 : typeof input === 'string' && config.reverse? input.split("").reverse().join("").toUpperCase() : input.toUpperCase()
 }
 
 console.log(processData('marco rossel', {'reverse': true}));
@@ -26,4 +30,3 @@ console.log(processData('marco rossel', {'reverse': false}));
 
 console.log(processData(5));
 console.log(processData('lushito'));
-

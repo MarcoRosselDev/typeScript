@@ -2,7 +2,7 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
-import './challenges/challenge_7_func_object_param.ts'
+import './challenges/challenge_8_type.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
