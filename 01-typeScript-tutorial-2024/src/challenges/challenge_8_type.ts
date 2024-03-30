@@ -18,10 +18,26 @@ type Manager = {id:number, name: string, employees: Employee[]}
 type Staff = Employee | Manager
 
 function printStaffDetails(params:Staff) {
-  console.log(params);
+  'department' in params? console.log(`${params.name} is an employee in the ${params.department} department.`): console.log(`${params.name} is a manager of ${params.employees.length} employees.`)
 }
+
+/* // esto es de el repositiorio de jhon smilga
+
+function printStaffDetails(staff: Staff) {
+  if ('employees' in staff) {
+    console.log(
+      `${staff.name} is a manager of ${staff.employees.length} employees.`
+    );
+  } else {
+    console.log(
+      `${staff.name} is an employee in the ${staff.department} department.`
+    );
+  }
+} */
 
 let juanito: Employee = {id: 21, name: 'juan', department: 'marketing'}
 let eduardo: Employee = {id: 23, name: 'eduardo', department: 'vago'}
-let marcos: Manager = {id: 20, name: 'marcos', employees: [juanito, ]}
-console.log(printStaffDetails(marcos));
+let marcos: Manager = {id: 20, name: 'marcos', employees: [juanito, eduardo]}
+printStaffDetails(marcos)
+printStaffDetails(eduardo)
+printStaffDetails(juanito)
