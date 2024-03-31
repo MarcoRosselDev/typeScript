@@ -8,32 +8,32 @@ Finally, create a variable called employee that can be a Person, DogOwner, or Ma
 */
 
 // aplicaremos _10 a cada nomber de variable por el numbero de challenger devido a que estos nombres de variable marcan error por que existen en otros archivos .ts
-interface Person_10 {
+export interface Person_10 {
   name: string
 }
 
-interface DogOwner_10 extends Person_10 {
+export interface DogOwner_10 extends Person_10 {
   dogName: string
 }
 
-interface Manager_10 extends Person_10{
-  managePeple(): void,
+export interface Manager_10 extends Person_10{
+  managePeople(): void,
   delegateTasks(): void
 }
 
-const marco_10: Person_10 = {
+export const marco_10: Person_10 = {
   name: 'marco',
 }
-const pedro_10: DogOwner_10 = {
+export const pedro_10: DogOwner_10 = {
   name: 'pedro',
   dogName: 'monkey',
 }
-const juan_10:Manager_10 = {
+export const juan_10:Manager_10 = {
   name: 'juan',
   delegateTasks() {
     console.log(this.name);
   },
-  managePeple() {
+  managePeople() {
     console.log(this.name);
   },
 }
@@ -43,14 +43,4 @@ function getEmployee(): Person_10 | DogOwner_10 | Manager_10 {
   return random_number < 0.33? marco_10 : random_number > 0.66? juan_10: pedro_10 
 }
 
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
-console.log(getEmployee());
+getEmployee()
