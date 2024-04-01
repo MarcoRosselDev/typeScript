@@ -12,11 +12,7 @@ function isManager(obj:Person_10 | DogOwner_10 | Manager_10):obj is Manager_10 {
   //console.log(obj);
   return  'managePeople' in obj? true: false
 }
-console.log(
-  isManager(juan_10),
-  isManager(marco_10),
-  isManager(pedro_10)
-);
+
 let empleados = [juan_10, marco_10, pedro_10]
 
 for(let person of empleados){
