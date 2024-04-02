@@ -13,6 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
 
+    "moduleDetection": "force", // quitar despues si molesta
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
