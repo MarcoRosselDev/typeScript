@@ -6,9 +6,17 @@ If value is neither a string nor a number, it must be a boolean. Log the string 
 Finally, call the checkValue function with value as the argument.
 */
 
-type Guarding = string | number | boolean
-let value:Guarding
+type ValueType = string | number | boolean
+let value:ValueType
 let random = Math.random()
+//let random = 0.1
 
-value = random < 0.33? 'Hola': random < 0.66? 200: true
+value = random < 0.33? 'Hola': random > 0.66? random: true
+
 console.log(value);
+
+function checkValue(value:ValueType):void {
+  return typeof value === 'string'? console.log(value.toUpperCase()): typeof value === 'number'? console.log(value.toFixed(2)): console.log(`el valor es un booleano: ${value}`);  
+}
+
+checkValue(value)
