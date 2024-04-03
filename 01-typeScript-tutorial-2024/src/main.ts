@@ -2,7 +2,7 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
-import './challenges/challenge_15_truthy_falsy.ts'
+import './challenges/challenge_16_instanceof_guard.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
