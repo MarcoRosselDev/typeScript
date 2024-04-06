@@ -20,4 +20,4 @@ const marco = new Book('class with typescript', 'marco rossel', 30)
 
 console.log(marco);
 
-marco.seeNumber()// aun que ts lo marca rojo igual se ve en el navegador
+//marco.seeNumber()// aun que ts lo marca rojo igual se ve en el navegador
