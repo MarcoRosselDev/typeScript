@@ -1,13 +1,13 @@
 //import { useState } from 'react'
 import './App.css'
-import {Props_inline} from './components/props'
+import {UseState} from './components/usestate'
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
     <>
-      <Props_inline id={30} title='Hola mundo !' />
+      <UseState nombre='Francisca' />
     </>
   )
 }
