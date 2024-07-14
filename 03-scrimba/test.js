@@ -1,11 +1,7 @@
-const menu = [
-  { name: "Margherita", price: 8},
-  { name: "Pepperoni", price: 10},
-  { name: "Hawaiian", price: 10},
-  { name: "Veggie", price: 9},
-]
+import {menu} from "./src/scrimba/menu.js"
 
-let cashInRegister = 100
+console.log(menu);
+/* let cashInRegister = 100
 const orderQueue = []
 
 function test(pizza_name) {
@@ -25,4 +21,4 @@ function test(pizza_name) {
 test("Margherita")
 
 console.log(orderQueue);
-console.log(cashInRegister);
+console.log(cashInRegister); */
