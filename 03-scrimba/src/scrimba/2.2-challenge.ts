@@ -1,5 +1,4 @@
-import { menu, Menu } from "./menu"
-
+import { menu } from "./menu"
 /* 2
 * Write another utility function, placeOrder, that take a pizza name parameter and:
 * 1. finds that pizza object in the menu,
@@ -8,25 +7,16 @@ import { menu, Menu } from "./menu"
 *    (e.g. {pizza: selecterdPizzaObjectFromStep1, status: "ordered"})
 * 4. return the new order object (just in case we need it  later)
 */
-type orderPizza = {
-  pizza?: string
-  status?: "ordered" | "sended"
-}
+let cashInRegister = 100
+const orderQueue: any[] = []
 
-let cashInRegister:number = 100
-const orderQueue: orderPizza[] = []
-
-function placeOrder(params:string): orderPizza {
-  let order: orderPizza = {}
-  menu.forEach(obj => {
-    if (params === obj.name) {
-      cashInRegister += obj.price
-      order.pizza = params
-      order.status = "ordered"
-    }
-  })
-  orderQueue.push(order)
-  return order
+function placeOrder(params:string) {
+  const pizzaSelecterd = menu.find(objPizza => objPizza.name === params)
+  if (pizzaSelecterd) {
+    cashInRegister += pizzaSelecterd.price
+    orderQueue.push(pizzaSelecterd, "ordered")
+  }
+  return pizzaSelecterd
 }
 
 placeOrder("Margherita")
