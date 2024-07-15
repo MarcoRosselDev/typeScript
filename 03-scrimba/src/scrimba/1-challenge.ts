@@ -8,5 +8,3 @@ import {menu, Pizza} from "./menu"
 export function addNewPizza(pizza:Pizza):void {
   menu.push(pizza)
 }
-
-addNewPizza({name:"Napolitana", price: 10})
