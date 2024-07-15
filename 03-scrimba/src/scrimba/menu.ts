@@ -1,9 +1,14 @@
-export type Menu  = {
+export type Pizza  = {
   name: string
   price: number
 }
 
-export let menu: Menu[] = [
+export type PizzaOrder = {
+  name: string
+  status: "ordered" | "preparation" |"sended"
+}
+
+export let menu: Pizza[] = [
   { name: "Margherita", price: 8},
   { name: "Pepperoni", price: 10},
   { name: "Hawaiian", price: 10},

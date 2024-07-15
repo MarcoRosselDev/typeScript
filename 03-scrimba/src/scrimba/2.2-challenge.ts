@@ -1,4 +1,4 @@
-import { menu } from "./menu"
+import { menu, PizzaOrder } from "./menu"
 /* 2
 * Write another utility function, placeOrder, that take a pizza name parameter and:
 * 1. finds that pizza object in the menu,
@@ -8,20 +8,20 @@ import { menu } from "./menu"
 * 4. return the new order object (just in case we need it  later)
 */
 let cashInRegister = 100
-const orderQueue: any[] = []
+const orderQueue: PizzaOrder[] = []
 
-function placeOrder(params:string) {
+function placeOrder(params:string): void | PizzaOrder  {
   const pizzaSelecterd = menu.find(objPizza => objPizza.name === params)
-  if (pizzaSelecterd) {
-    cashInRegister += pizzaSelecterd.price
-    orderQueue.push(pizzaSelecterd, "ordered")
+  if (!pizzaSelecterd) {
+    return
   }
-  return pizzaSelecterd
+  let queue: PizzaOrder = {   name: pizzaSelecterd.name,  status: "ordered"   }
+  cashInRegister += pizzaSelecterd.price
+  orderQueue.push(queue)
+  return queue
 }
 
-placeOrder("Margherita")
+console.log(placeOrder("Margherita"));
+//placeOrder("Margherita")
 console.log(cashInRegister);
 console.log(orderQueue);
-
-//output expected: orderQueue = [{pizza:"Margherita", status: "ordered"}]
-// cashInRegister = 108

@@ -1,4 +1,4 @@
-import { menu, Menu } from "./menu"
+import { menu } from "./menu"
 
 /* 2
 * Write another utility function, placeOrder, that take a pizza name parameter and:
