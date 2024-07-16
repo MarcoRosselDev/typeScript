@@ -16,15 +16,15 @@ addNewPizza({name:"champiñones", price: 8, id: 6})
 
 function getPizzaDetail(identifier:string|number):Pizza | string {
   if (typeof identifier === "string") {
-    const found = menu.find(obj => obj.name.toUpperCase() === identifier.toUpperCase())
-    return found? found: `No se encontro la pizza con el nombre ${identifier}` 
+    const found = menu.find(obj => obj.name.toUpperCase() === identifier.toUpperCase());
+    return found? found: `No se encontro la pizza con el nombre ${identifier}`;
   }
-  const found_number = menu.find(obj => obj.id === identifier)
-  return found_number? found_number: `No se encontro la pizza con el id ${identifier}`
-}
+  const found_number = menu.find(obj => obj.id === identifier);
+  return found_number? found_number: `No se encontro la pizza con el id ${identifier}`;
+};
 
-console.log(getPizzaDetail(6));
-console.log(getPizzaDetail(7));
-console.log(getPizzaDetail(1));
-console.log(getPizzaDetail("napolitana"));
-console.log(getPizzaDetail("marco"));
+console.log(getPizzaDetail(6))
+console.log(getPizzaDetail(7))
+console.log(getPizzaDetail(1))
+console.log(getPizzaDetail("napolitana"))
+console.log(getPizzaDetail("marco"))

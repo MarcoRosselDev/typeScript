@@ -7,3 +7,9 @@ export type Person = {
     country: string
   }
 }
+
+export type User = {
+  id: number
+  username: string
+  role: "member"|"contributor"|"admin"
+}
