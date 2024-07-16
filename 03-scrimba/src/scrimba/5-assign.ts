@@ -9,7 +9,7 @@
 updateUser(4, {role: "contributor"})
 
 console.log(user); */
-import { User } from "./types"
+//import { User } from "./types"
 import { users } from "./people"
 
 console.log(users);
